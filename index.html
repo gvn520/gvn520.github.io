@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perguntinha pra vose amor...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Página de Login -->
+    <div id="login-container" class="login-container">
+        <div class="login-box">
+            <div class="heart-animation">💕</div>
+            <h1>Acesso Restrito</h1>
+            <p class="subtitle">login qui so a genti sabi</p>
+            
+            <form id="login-form" onsubmit="validarLogin(event)">
+                <div class="form-group">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario">
+                    <small>u nomi da minha mamãe</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder>
+                    <small>nossu aniversario de namoru (formato DD/MM)</small>
+                </div>
+                
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            
+            <div id="erro" class="erro"></div>
+        </div>
+    </div>
+
+    <!-- Página Principal (Pergunta) -->
+    <div id="main-container" class="main-container" style="display: none;">
+        <div class="proposal-box">
+            <div class="confetti-animation">✨</div>
+            
+            <h1 class="title-animation">mamãe...</h1>
+            
+            <div class="heart-big">💍</div>
+            
+            <h2 class="question-animation">vose aceita casar com eu?</h2>
+            
+            <p class="romantic-text">
+                vose e a pessoa mais especial da minha vida e 
+                <br>naum consigo imaginar um futuro sem vose...
+            </p>
+            
+            <div class="button-container">
+                <button class="btn-yes" onclick="responderSim()">SIM!!!! 💕</button>
+                <button class="btn-no" onclick="responderNao()">NAUM EUEM</button>
+            </div>
+            
+            <div id="resposta" class="resposta"></div>
+        </div>
+    </div>
+
+    <!-- Player de Áudio com Música Local -->
+    <audio id="background-music" muted loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
